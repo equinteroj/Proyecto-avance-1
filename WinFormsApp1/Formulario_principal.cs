@@ -4,6 +4,21 @@ namespace WinFormsApp1
 {
     public partial class Formulario_principal : Form
     {
+        public static List<Medicamento> ListaMedicamentos = new List<Medicamento>();
+
+        public class Medicamento
+        {
+            public string Codigo { get; set; }
+            public string Nombre { get; set; }
+            public string Tipo { get; set; }
+            public decimal Costo { get; set; }
+            public int Cantidad { get; set; }
+            public decimal PrecioVenta { get; set; }
+            public int Stock { get; set; }
+            public DateTime Vencimiento { get; set; }
+            public string Instrucciones { get; set; }
+        }
+
         public Formulario_principal()
         {
             InitializeComponent();

@@ -96,6 +96,7 @@
             alertas.TabIndex = 4;
             alertas.Text = "Ver Alertas";
             alertas.UseVisualStyleBackColor = false;
+            alertas.Click += alertas_Click;
             // 
             // button1
             // 
@@ -107,6 +108,7 @@
             button1.TabIndex = 6;
             button1.Text = "Reportes";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
             // 
             // atras
             // 
