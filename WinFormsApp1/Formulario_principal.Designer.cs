@@ -42,6 +42,11 @@
             button2 = new Button();
             button1 = new Button();
             pictureBox2 = new PictureBox();
+            btcomprar = new Button();
+            txtCodigo = new TextBox();
+            txtCantidad = new TextBox();
+            label7 = new Label();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -207,7 +212,53 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
-            // Form1
+            // btcomprar
+            // 
+            btcomprar.BackColor = Color.MediumAquamarine;
+            btcomprar.FlatStyle = FlatStyle.Flat;
+            btcomprar.Location = new Point(561, 375);
+            btcomprar.Name = "btcomprar";
+            btcomprar.Size = new Size(75, 23);
+            btcomprar.TabIndex = 5;
+            btcomprar.Text = "Comprar";
+            btcomprar.UseVisualStyleBackColor = false;
+            btcomprar.Click += btcomprar_Click;
+            // 
+            // txtCodigo
+            // 
+            txtCodigo.Location = new Point(530, 346);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(100, 23);
+            txtCodigo.TabIndex = 6;
+            // 
+            // txtCantidad
+            // 
+            txtCantidad.Location = new Point(530, 375);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(25, 23);
+            txtCantidad.TabIndex = 7;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.MediumAquamarine;
+            label7.Location = new Point(478, 349);
+            label7.Name = "label7";
+            label7.Size = new Size(46, 15);
+            label7.TabIndex = 8;
+            label7.Text = "Codigo";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.MediumAquamarine;
+            label8.Location = new Point(469, 379);
+            label8.Name = "label8";
+            label8.Size = new Size(55, 15);
+            label8.TabIndex = 9;
+            label8.Text = "Cantidad";
+            // 
+            // Formulario_principal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -215,11 +266,16 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(936, 497);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(txtCantidad);
+            Controls.Add(txtCodigo);
+            Controls.Add(btcomprar);
             Controls.Add(label6);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
             DoubleBuffered = true;
-            Name = "Form1";
+            Name = "Formulario_principal";
             Text = "formulario principal ";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
@@ -244,5 +300,10 @@
         private Label label4;
         private Label label3;
         private Label label6;
+        private Button btcomprar;
+        private TextBox txtCodigo;
+        private TextBox txtCantidad;
+        private Label label7;
+        private Label label8;
     }
 }

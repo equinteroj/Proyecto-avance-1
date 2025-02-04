@@ -72,7 +72,12 @@ namespace proyecto
 
             foreach (var med in Formulario_principal.ListaMedicamentos)
             {
-                mensaje += $"Código: {med.Codigo}, Nombre: {med.Nombre}, Precio: {med.PrecioVenta}, Stock: {med.Stock}, Vence: {med.Vencimiento.ToShortDateString()}\n";
+                // Verificar si el medicamento está vencido o no
+                string estadoVencimiento = med.Vencimiento < DateTime.Now ? "VENCIDO" : "Vigente";
+
+                // Agregar al mensaje
+                mensaje += $"Código: {med.Codigo}, Nombre: {med.Nombre}, Precio: {med.PrecioVenta}, " +
+                           $"Stock: {med.Stock}, Vence: {med.Vencimiento.ToShortDateString()}, Estado: {estadoVencimiento}\n";
             }
 
             MessageBox.Show(mensaje, "Reporte de Inventario", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -88,7 +93,7 @@ namespace proyecto
                 return;
             }
 
-            string mensaje = "⚠ Medicamentos con Stock Bajo:\n\n";
+            string mensaje = " Medicamentos con Stock Bajo:\n\n";
 
             foreach (var med in medicamentosBajos)
             {
